@@ -1,0 +1,18 @@
+system:
+  phase_models: NB-NI-input.json      # path to the phases file
+  datasets: input_test               # path to the directory containing input data
+output:
+  output_db: mcmc_NBNI.tdb           # what to name of the output TDB file
+  tracefile: trace_NBNI.npy                  # what to name of the trace file in order to analyze the results or continue run ESPEI/mcmc 
+  probfile: lnprob_NBNI.npy                  # what to name of the probability file in order to analyze the results later
+  verbosity: 2                        # Levels of verbosity. Choose 0, 1, 2, 3 for Warnings, Info, Debug, and Details
+mcmc:
+  save_interval: 1                    # To save the npy files after how many mcmc steps
+  input_db: Nb-Ni.tdb               # name of the input TDB file to run mcmc, where the VV varialbes will be adjusted by mcmc 
+  scheduler: None                     # name of the scheduler to be used by ESPEI 
+  iterations: 1                     # what are the total iterations to run ESPEI/mcmc
+  chain_std_deviation: 0.1
+
+
+
+    

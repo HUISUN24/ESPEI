@@ -103,5 +103,10 @@ def setup_context(dbf, datasets, symbols_to_fit=None, data_weights=None, make_ca
             'phase_models': models, 'callables': eq_callables,
             'data_weight': data_weights.get('ACR', 1.0),
         },
+        'Y_kwargs':{
+            'dbf': dbf, 'comps': comps, 'phases': phases, 'datasets': datasets,
+            'phase_models': models, 'callables': eq_callables,
+            'data_weight': data_weights.get('Y', 1.0),
+        },
     }
     return error_context

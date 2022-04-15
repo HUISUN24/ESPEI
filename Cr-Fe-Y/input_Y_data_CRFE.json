@@ -1,0 +1,26 @@
+
+{
+  "components": ["CR", "FE", "VA"],
+  "phases": ["SIGMA"],
+  "conditions": {
+    "P": 101325,
+    "T": 973,
+    "X_FE": [0.505,0.509,0.52,0.523,0.538,0.547,0.538,0.538,0.538]
+  },
+
+  "output": "Y",
+    "values":   [[[
+      [0.362,null,0.285,null,0.249,null,0.900,null,0.887,null],
+      [0.384,null,0.302,null,0.245,null,0.884,null,0.856,null],
+      [0.392,null,0.327,null,0.277,null,0.878,null,0.849,null],
+      [0.399,null,0.332,null,0.271,null,0.876,null,0.868,null],
+      [0.413,null,0.343,null,0.260,null,0.901,null,0.913,null],
+      [0.426,null,0.357,null,0.296,null,0.900,null,0.876,null],
+      [0.404,null,0.341,null,0.296,null,0.898,null,0.894,null],
+      [0.391,null,0.358,null,0.283,null,0.907,null,0.875,null],
+      [0.393,null,0.358,null,0.267,null,0.913,null,0.876,null]
+    ]]],
+
+  "reference": "Cieslak2008",
+  "comment": "Table2"
+}

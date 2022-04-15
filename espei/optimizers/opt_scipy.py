@@ -50,11 +50,15 @@ class SciPyOptimizer(OptimizerBase):
             actvity_error = calculate_activity_error(parameters=parameters, **activity_kwargs)
         else:
             actvity_error = 0
+        if Y_kwargs is not None:
+            Y_prob = calculate_Y_probability(parameters=parameters,**Y_kwargs)
+        else:
+            Y_prob = 0
         if thermochemical_kwargs is not None:
             single_phase_error = calculate_non_equilibrium_thermochemical_probability(parameters=parameters, **thermochemical_kwargs)
         else:
             single_phase_error = 0
-        total_error = multi_phase_error + single_phase_error + actvity_error
+        total_error = multi_phase_error + single_phase_error + actvity_error + Y_prob
         logging.log(TRACE, 'Likelihood - {:0.2f}s - Thermochemical: {:0.3f}. ZPF: {:0.3f}. Activity: {:0.3f}. Total: {:0.3f}.'.format(time.time() - starttime, single_phase_error, multi_phase_error, actvity_error, total_error))
         error = np.array(total_error, dtype=np.float64)
         return error
